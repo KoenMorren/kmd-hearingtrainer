@@ -1,0 +1,9 @@
+{
+	"productionEnv": false,
+	"moduleName": "kmd-hearingtrainer",
+	"vendor": [
+		"./node_modules/angular/angular.js",
+		"./node_modules/angular-route/angular-route.js",
+		"./node_modules/vexflow/releases/vexflow-debug.js"
+	]
+}

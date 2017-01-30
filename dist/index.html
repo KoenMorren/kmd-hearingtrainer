@@ -1,0 +1,46 @@
+<html data-ng-app="kmd-hearingtrainer">
+	<head>
+		<title>kmd-hearingtrainer</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<base href="/">
+		<link rel="shortcut icon" href="favicon.ico" />
+
+		<!-- Roboto Font -->
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+		<!-- styles:css -->
+		<link rel="stylesheet" href="css/style.css">
+		<!-- endinject -->
+	</head>
+	<body>
+		<div class="heading">
+			<div class="heading-container">
+				<img src="favicon.ico" alt="note">
+				<div>
+					Hearing trainer
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div data-ng-view></div>
+		</div>
+
+		<!-- vendor:js -->
+		<script src="js/vendor.js"></script>
+		<!-- endinject -->
+		<!-- app:js -->
+		<script src="js/app/kmd-hearingtrainer.module.js"></script>
+		<script src="js/app/controllers/exercise.controller.js"></script>
+		<script src="js/app/controllers/settings.controller.js"></script>
+		<script src="js/app/directives/note-container.directive.js"></script>
+		<script src="js/app/templatecache/templates.js"></script>
+		<script src="js/app/services/audio.service.js"></script>
+		<script src="js/app/services/exercise-generator.service.js"></script>
+		<script src="js/app/services/note-to-frequency-converter.service.js"></script>
+		<script src="js/app/services/real-estate.service.js"></script>
+		<script src="js/app/services/settings.service.js"></script>
+		<!-- endinject -->
+	</body>
+</html>

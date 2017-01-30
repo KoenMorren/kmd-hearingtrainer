@@ -1,0 +1,53 @@
+<div class="exercise">
+    <div class="controls">
+        <button data-ng-click="vm.playExercise();"
+                data-ng-class="{'disabled': vm.exerciseIsPlaying}">
+            replay exercise
+        </button>            
+        <button data-ng-click="vm.checkExerciseResult();">
+            check exercise
+        </button>
+    </div>
+    <div class="stave-container"
+         id="stave-container">
+        <button class="note-selector selector1"
+                data-ng-class="{'active': vm.activeNoteIndex === 1, 'correct': vm.correctness[0], 'incorrect': vm.correctness[0] === false}"
+                data-ng-click="vm.setActiveNoteIndex(1)">
+        </button>
+        <button class="note-selector selector2"
+                data-ng-class="{'active': vm.activeNoteIndex === 2, 'correct': vm.correctness[1], 'incorrect': vm.correctness[1] === false}"
+                data-ng-click="vm.setActiveNoteIndex(2)">
+        </button>
+        <button class="note-selector selector3"
+                data-ng-class="{'active': vm.activeNoteIndex === 3, 'correct': vm.correctness[2], 'incorrect': vm.correctness[2] === false}"
+                data-ng-click="vm.setActiveNoteIndex(3)">
+        </button>
+        <button class="note-selector selector4"
+                data-ng-class="{'active': vm.activeNoteIndex === 4, 'correct': vm.correctness[3], 'incorrect': vm.correctness[3] === false}"
+                data-ng-click="vm.setActiveNoteIndex(4)">
+        </button>
+        <button class="note-selector selector5"
+                data-ng-class="{'active': vm.activeNoteIndex === 5, 'correct': vm.correctness[4], 'incorrect': vm.correctness[4] === false}"
+                data-ng-click="vm.setActiveNoteIndex(5)">
+        </button>
+        <button class="note-selector selector6"
+                data-ng-class="{'active': vm.activeNoteIndex === 6, 'correct': vm.correctness[5], 'incorrect': vm.correctness[5] === false}"
+                data-ng-click="vm.setActiveNoteIndex(6)">
+        </button>
+    </div>
+    <div class="button-container">
+        <div class="note-container"
+             data-ng-repeat="note in vm.availableNotes">
+            <button class="note active"
+                    data-ng-click="vm.setNoteAtSelectedIndex(note)"
+                    note-container>
+            </button>
+        </div>
+    </div>
+    <div class="navbar">
+        <button class="back"
+                data-ng-click="vm.goBackToSettings()">
+                Back to settings
+        </button>
+    </div>
+</div>

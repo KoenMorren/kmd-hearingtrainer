@@ -1,0 +1,28 @@
+<div class="settings">
+    <!-- select notes for the exercise -->
+    <div class="header">
+        Select the notes you want to train:
+    </div>
+    <div class="button-container">
+        <div class="note-container"
+             data-ng-repeat="note in vm.possibleNotes">
+            <button class="note"
+                    data-ng-class="{'active': vm.activeNotes.indexOf(note) > -1}"
+                    data-ng-click="vm.toggleNote(note)"
+                    note-container>
+            </button>
+        </div>
+    </div>
+    <!-- set duration and interval -->
+    <div class="other-settings">
+        <label>Duration (in sec)</label>
+        <label>Interval (in sec)</label>
+        <input type="text" data-ng-model="vm.duration">
+        <input type="text" data-ng-model="vm.interval">
+    </div>
+    <!-- button to go to exercise screen -->
+    <button class="start"
+            data-ng-click="vm.startExercise()">
+        Start!
+    </button>
+</div>
